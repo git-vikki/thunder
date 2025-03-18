@@ -16,5 +16,12 @@ pipeline
         sh 'git clone https://github.com/RavitejaAdepudi/vamsi.git'
       }
     }
+    stage('building the code')
+    {
+      steps
+      {
+        sh 'mvn -f /var/lib/jenkins/workspace/2nd/vamsi/mavewebappdemo/pom.xml install'
+      }
+    }
   }
 }
