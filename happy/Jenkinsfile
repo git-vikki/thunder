@@ -27,7 +27,7 @@ pipeline
     {
       steps
       {
-         sh ' cp -R /var/lib/jenkins/workspace/3rd/vamsi/mavewebappdemo/target/*.war /opt/apache-tomcat-9.0.102/webapps '
+         sh ' cp -r /var/lib/jenkins/workspace/3rd/vamsi/mavewebappdemo/target/*.war /opt/apache-tomcat-9.0.102/webapps '
       }
     }
   }
