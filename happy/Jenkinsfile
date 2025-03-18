@@ -1,0 +1,27 @@
+pipeline
+{
+  agent any
+
+  tools
+  {
+    maven 'MAVEN3.9.9'
+  }
+  
+  stages
+  {
+    stage('checkout code from github repo')
+    {
+      steps
+      {
+        sh 'git clone https://github.com/RavitejaAdepudi/vamsi.git'
+      }
+    }
+    stage('building the code')
+    {
+      steps
+      {
+        sh 'mvn -f /var/lib/jenkins/workspace/3rd/vamsi/mavewebappdemo/pom.xml install'
+      }
+    }
+  }
+}
